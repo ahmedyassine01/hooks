@@ -1,0 +1,109 @@
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #1a1a1a; 
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  padding: 20px;
+}
+
+.movie-card {
+  width: 500px;
+  background-color: #c40b0b; 
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+.btna{
+ margin-right: 1000px;
+  outline: 0;
+  margin: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: white;
+  width: 100px;
+  border: 0.5px solid rgba(0, 0, 0, 0.37);
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+.bo{
+  text-align: center;
+  height: 100px;
+
+ 
+}
+form{
+  height: 500px;
+  justify-content: center;
+  margin: 100px;
+}
+
+
+
+.movie-details {
+  padding: 15px;
+}
+
+h3 {
+  margin-top: 0;
+  color: #fff;
+  font-size: 1.5rem; 
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-card img {
+  width: 100%;
+  height: %; 
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+.btn{
+  outline: 0;
+  margin: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: white;
+  width: 100px;
+  border: 0.5px solid rgba(0, 0, 0, 0.37);
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+p {
+  color: #ddd; 
+  font-size: 1rem; 
+  line-height: 1.4;
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  #movie-list {
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .movie-card {
+      width: 80%;
+  }
+}
