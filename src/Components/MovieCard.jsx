@@ -1,6 +1,7 @@
 import React from 'react'
 import StarRating from './StarRating'
 import EditedMovie from './EditMovie'
+import { Link } from 'react-router-dom'
 
 const MovieCard = ({movie,functionDelete,handleEdit}) => {
   return (
@@ -10,6 +11,8 @@ const MovieCard = ({movie,functionDelete,handleEdit}) => {
         <StarRating rating={movie.rating}/>
         <p>{movie.date}</p>
         <button className='btn' onClick={()=>functionDelete(movie.id)}>Delete</button>
+       <Link to={`/info/${movie.id}`}>
+       <button>Info</button></Link> 
         <EditedMovie film={movie} handleEdit={handleEdit}/>
     </div>
   )

@@ -88,12 +88,24 @@ h3 {
   padding: 0.5rem 1rem;
   text-align: center;
 }
+.waw{
+  width: auto;
+  background-color: #c40b0b; 
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
 
 p {
   color: #ddd; 
   font-size: 1rem; 
   line-height: 1.4;
   text-align: center;
+
 }
 
 

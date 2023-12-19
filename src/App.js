@@ -4,6 +4,11 @@ import { moviesdata } from './data';
 import Movielist from './Components/MovieList';
 import AddNewMovie from './Components/AddNewMovie';
 import Search from './Components/Search';
+import { BrowserRouter as Router, Route, NavLink, Routes } from 'react-router-dom'
+import Info from './Components/Info';
+
+
+
 
 function App() {
   const [movies, setMovies] = useState(moviesdata);
@@ -19,9 +24,18 @@ function App() {
   const hadleRating=(x)=>setRating(x);
   return (
     <div className="App">
-     <Search  searchText={searchText} rating={rating} hadleText={hadleText} hadleRating={hadleRating}/>
+        <Search  searchText={searchText} rating={rating} hadleText={hadleText} hadleRating={hadleRating}/>
+      <Router>
+        <Routes>
+          <Route path='/' element={
     <Movielist   list={movies.filter(el=>el.name.toLowerCase().includes(searchText.toLowerCase())&&el.rating>=rating)} deleteFunction={handleDelete} handleEdit={handleEdit}/>
+
+          }></Route>
+          <Route path="/info/:id" element={<Info list={movies}></Info>}/>
+        </Routes>
+      </Router>
     <AddNewMovie AddFunction={handleAdd}/>
+   
     </div>
   );
 }
